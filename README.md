@@ -1,3 +1,3 @@
 # Hugo
 
-Minicrud projectje
+Minicrud projectje restaurant website
