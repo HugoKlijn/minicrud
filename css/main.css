@@ -28,7 +28,8 @@ nav a {
 }
 
 .logo {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Poppins", sans-serif;
+  padding-left: 1vh;
 }
 
 .achtergrond img {
