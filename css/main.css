@@ -65,3 +65,7 @@ section {
   transform: scale(1.1);
   transition: transform 0.2s;
 }
+
+.nav-link{
+  text-transform: uppercase;
+}

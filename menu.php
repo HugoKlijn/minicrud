@@ -28,13 +28,13 @@ $result = $stmt->fetchAll();
 <body>
     <nav>
         <div class="logo">
-            <h2>SUSHI</h2>
+            <h2>Suchi</h2>
         </div>
         <div class="navigatie">
-            <a href="#">MENU</a>
-            <a href="index.php">WORK</a>
-            <a href="#">ABOUT</a>
-            <a href="#">CONTACT</a>
+            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link" href="index.php">Work</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
         </div>
     </nav>
     <main>
