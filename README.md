@@ -2,4 +2,4 @@
 
 Minicrud projectje restaurant website
 
-[I'm an inline-style link](index.php)
+[link naar website misschien](index.php)

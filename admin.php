@@ -39,24 +39,61 @@ $result = $stmt->fetchAll();
     <?php include "includes/header.php";?>
 
     <main>
-        <table>
-            <tr>
-                <th>product </th>
-                <th>prijs </th>
-                <th>voorraad </th>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">naam</th>
+                    <th scope="col">prijs</th>
+                    <th scope="col">voorraad</th>
+                    <th scope="col">img</th>
 
-            <tr>
-                <?php foreach($result as $res){
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php foreach($result as $res){
             ?>
-            <tr>
-                <td> <?php echo $res['naam'];?></td>
-                <td> <?php echo $res['prijs'];?></td>
-                <td> <?php echo $res['voorraad'];?></td>
-            <tr>
-                <?php   }?>
+                <tr>
+                    <td> <?php echo $res['id'];?></td>
+                    <td> <?php echo $res['naam'];?></td>
+                    <td> <?php echo $res['prijs'];?></td>
+                    <td> <?php echo $res['voorraad'];?></td>
+                    <td> <?php echo $res['img'];?></td>
 
+                <tr>
+                    <?php   }?>
+
+            </tbody>
         </table>
+
+
     </main>
+    <div class='container mb-8'>
+        <div class='row'>
+            <div class='col-8'>
+                <form method='post' action='insertFood.php'>
+
+                    <label for="exampleInputEmail1" class="form-label">Product naam</label>
+                    <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='naam'>
+
+
+                    <label for="exampleInputEmail1" class="form-label">Prijs</label>
+                    <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='prijs'>
+
+
+                    <label for="exampleInputEmail1" class="form-label">Voorraad</label>
+                    <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='voorraad'>
+
+
+                    <label for="exampleInputEmail1" class="form-label">Afbeelding</label>
+                    <input type="file" class="form-control" id="naam" aria-describedby="emailHelp" name='img'>
+
+                    <button type="submit" class="btn btn-primary">Voeg toe</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <?php include "includes/footer.php";?>
 

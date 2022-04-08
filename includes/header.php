@@ -16,6 +16,6 @@
     <div class="col-md-3 text-end">
         <button type="button" class="btn btn-outline-primary me-2"
             onclick="document.location='login.php'">Login</button>
-        <button type="button" class="btn btn-primary" onclick="document.location='login.php'">Sign-up</button>
+        <button type="button" class="btn btn-primary" onclick="document.location='signup.php'">Sign-up</button>
     </div>
 </header>

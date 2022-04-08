@@ -33,6 +33,10 @@ section {
   align-items: center;
 }
 
+main {
+  width: 100%;
+}
+
 .logo {
   font-family: "Poppins", sans-serif;
   padding-left: 1vh;
@@ -68,4 +72,11 @@ section {
 
 .nav-link {
   text-transform: uppercase;
+}
+
+.home {
+  background-image: url("../img/achtergrond.avif");
+}
+.home img {
+  width: 100%;
 }
