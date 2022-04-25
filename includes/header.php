@@ -33,7 +33,8 @@ include_once "includes/connect.php";
                 } 
                 
                 else {
-                    echo "<a href='login.php' class='btn btn-outline-primary'>login</a>";
+                    echo "<a href='login.php' class='btn btn-outline-primary'>login </a>";
+                    
                     echo "<a href='signup.php' class='btn btn-outline-primary'>registreren</a>";
                     
                 }
