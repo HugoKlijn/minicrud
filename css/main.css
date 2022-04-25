@@ -5,6 +5,8 @@
 
 body {
   background-color: white;
+  height: 100vh;
+  width: 100%;
 }
 
 nav {
@@ -35,6 +37,7 @@ section {
 
 main {
   width: 100%;
+  height: 89%;
 }
 
 .logo {
@@ -76,6 +79,10 @@ main {
 
 .home {
   background-image: url("../img/achtergrond.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 .home img {
   width: 100%;

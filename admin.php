@@ -2,7 +2,6 @@
 include_once "includes/connect.php";
 
 if(isset($_SESSION['username'])){
-    echo "welcome " . $_SESSION['username'];
 } else {
     header("location: login.php");
 }
@@ -42,11 +41,13 @@ $result = $stmt->fetchAll();
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">id</th>
                     <th scope="col">naam</th>
                     <th scope="col">prijs</th>
                     <th scope="col">voorraad</th>
                     <th scope="col">img</th>
+                    <th scope="col">delete</th>
+                    <th scope="col">edit</th>
 
                 </tr>
             </thead>
@@ -60,40 +61,51 @@ $result = $stmt->fetchAll();
                     <td> <?php echo $res['prijs'];?></td>
                     <td> <?php echo $res['voorraad'];?></td>
                     <td> <?php echo $res['img'];?></td>
-
+                    <td>
+                        <form action="delete.php" method="post">
+                            <input type="hidden" name="id" value="<?php echo $res['id'];?>">
+                            <input type="submit" value="delete">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="update.php" method="get">
+                            <input type="hidden" name="id" value="<?php echo $res['id'];?>">
+                            <input type="submit" value="edit">
+                        </form>
+                    </td>
                 <tr>
                     <?php   }?>
 
             </tbody>
         </table>
 
+        <div class='container mb-8'>
+            <div class='row'>
+                <div class='col-8'>
+                    <form method='post' action='insertFood.php'>
 
-    </main>
-    <div class='container mb-8'>
-        <div class='row'>
-            <div class='col-8'>
-                <form method='post' action='insertFood.php'>
-
-                    <label for="exampleInputEmail1" class="form-label">Product naam</label>
-                    <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='naam'>
+                        <label for="exampleInputEmail1" class="form-label">Product naam</label>
+                        <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='naam'>
 
 
-                    <label for="exampleInputEmail1" class="form-label">Prijs</label>
-                    <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='prijs'>
+                        <label for="exampleInputEmail1" class="form-label">Prijs</label>
+                        <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='prijs'>
 
 
-                    <label for="exampleInputEmail1" class="form-label">Voorraad</label>
-                    <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='voorraad'>
+                        <label for="exampleInputEmail1" class="form-label">Voorraad</label>
+                        <input type="text" class="form-control" id="naam" aria-describedby="emailHelp" name='voorraad'>
 
 
-                    <label for="exampleInputEmail1" class="form-label">Afbeelding</label>
-                    <input type="file" class="form-control" id="naam" aria-describedby="emailHelp" name='img'>
+                        <label for="exampleInputEmail1" class="form-label">Afbeelding</label>
+                        <input type="file" class="form-control" id="naam" aria-describedby="emailHelp" name='img'>
 
-                    <button type="submit" class="btn btn-primary">Voeg toe</button>
-                </form>
+                        <button type="submit" class="btn btn-primary">Voeg toe</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+
 
     <?php include "includes/footer.php";?>
 

@@ -22,6 +22,7 @@ include_once "includes/connect.php";
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
     <link rel="stylesheet" href="css/main.css" />
     <link href="signin.css" rel="stylesheet">
+    <script defer src="main.js"></script>
     <title>Sushi</title>
 </head>
 
@@ -31,7 +32,10 @@ include_once "includes/connect.php";
 
     <?php include "includes/login2.php";?>
 
+
     <?php include "includes/footer.php";?>
+
+    <script defer src="main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
